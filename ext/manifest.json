@@ -1,0 +1,20 @@
+{ 
+  "manifest_version": 2,
+  "name": "StudyMore",
+  "version": "0.1",
+  "description": "An extension to block out your impulses to procrastinate",
+  "permissions": [
+          "storage",
+          "activeTab",
+          "tabs"
+        ],
+  "content_scripts":[{ 
+    "js" :[
+      "background.js"
+    ],
+    "matches": ["*://*/*"]
+  }],
+  "chrome_url_overrides" : {
+            "newtab": "home.html"
+  }
+}
